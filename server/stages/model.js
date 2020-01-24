@@ -3,17 +3,21 @@ module.exports = knex => {
     getAll: async function() {
       return await this._knex().select("name");
     },
-    get: async function(name) {
-      return (await this._whereName(name)).pop();
+    get: async function(where) {
+      const query =
+        where.name !== undefined
+          ? this._whereName(where.name)
+          : this._knex().where(where);
+      return (await query).pop();
     },
     create: async function(input) {
       await this._knex().insert(this._formatInput(input));
-      return this.get(input.name);
+      return this.get({ name: input.name });
     },
     update: async function(name, input) {
       input = this._formatInput(input);
       const result = await this._whereName(name).update(input);
-      return this.get(input.name === undefined ? name : input.name);
+      return this.get({ name: input.name === undefined ? name : input.name });
     },
     delete: async function(name) {
       return !!(await this._whereName(name).delete());

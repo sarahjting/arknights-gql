@@ -5,7 +5,7 @@ module.exports = models => {
         return models.races.getAll();
       },
       getRace: (parent, args) => {
-        return models.races.get(args.name);
+        return models.races.get({ name: args.name });
       }
     },
     Mutation: {

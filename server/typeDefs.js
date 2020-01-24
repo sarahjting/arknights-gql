@@ -21,28 +21,6 @@ const rootTypeDef = gql`
     spCost: Int
     spInitial: Int
   }
-  type Operator {
-    iid: Int
-    name: String
-    class: Class
-    rarity: Int
-    origin: Origin
-    faction: Faction
-    race: Race
-    isRanged: Boolean
-    stages: [Stage]
-    combatSkills: [CombatSkill]
-  }
-  input OperatorInput {
-    iid: Int!
-    name: String!
-    class: String!
-    rarity: Int
-    origin: String
-    faction: String
-    race: String
-    isRanged: Boolean
-  }
   type OperatorStage {
     operator: Operator
     stage: String
@@ -77,15 +55,13 @@ const rootTypeDef = gql`
 `;
 
 const typeDefs = [rootTypeDef];
-["classes", "factions", "origins", "races", "stages"].forEach(v =>
+["classes", "factions", "origins", "races", "stages", "operators"].forEach(v =>
   typeDefs.push(require(`./${v}/typeDefs.js`))
 );
 module.exports = typeDefs;
 
 /*
   type Query {
-    getOperators: [Operator]
-    getOperator(name: String, iid: Int): Operator
     getCombatSkill(
       characterName: String!
       stage: String
@@ -94,9 +70,6 @@ module.exports = typeDefs;
     getCombatSkills: [CombatSkill]
   }
   type Mutation {
-    createOperator(input: OperatorInput!): Operator
-    updateOperator(name: String!, input: OperatorInput!): Operator
-    deleteOperator(name: String!): Boolean
     createCombatSkill(
       characterName: String!
       input: CombatSkillInput!

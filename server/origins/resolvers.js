@@ -5,7 +5,7 @@ module.exports = models => {
         return models.origins.getAll();
       },
       getOrigin: (parent, args) => {
-        return models.origins.get(args.name);
+        return models.origins.get({ name: args.name });
       }
     },
     Mutation: {

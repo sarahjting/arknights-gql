@@ -5,7 +5,7 @@ module.exports = models => {
         return models.stages.getAll();
       },
       getStage: (parent, args) => {
-        return models.stages.get(args.name);
+        return models.stages.get({ name: args.name });
       }
     },
     Mutation: {

@@ -5,7 +5,7 @@ module.exports = models => {
         return models.factions.getAll();
       },
       getFaction: (parent, args) => {
-        return models.factions.get(args.name);
+        return models.factions.get({ name: args.name });
       }
     },
     Mutation: {

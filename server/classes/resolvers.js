@@ -5,7 +5,7 @@ module.exports = models => {
         return models.classes.getAll();
       },
       getClass: (parent, args) => {
-        return models.classes.get(args.name);
+        return models.classes.get({ name: args.name });
       }
     },
     Mutation: {
