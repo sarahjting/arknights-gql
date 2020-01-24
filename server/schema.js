@@ -108,13 +108,18 @@ module.exports = gql`
     atkSpeed: Int!
   }
   type Query {
+    getClass(name: String!): Class
     getClasses: [Class]
+  }
+  type Mutation {
+    createClass(input: ClassInput!): Class
+    updateClass(name: String!, input: ClassInput!): Class
+    deleteClass(name: String!): Boolean
   }
 `;
 
 /*
   type Query {
-    getClass(name: String!): Class
     getStages: [Stage]
     getStage(name: String, stageId: Int): Stage
     getOperators: [Operator]
@@ -133,9 +138,6 @@ module.exports = gql`
     getCombatSkills: [CombatSkill]
   }
   type Mutation {
-    createClass(input: ClassInput!): Class
-    updateClass(name: String!, input: ClassInput!): Class
-    deleteClass(name: String!): Boolean
     createOperator(input: OperatorInput!): Operator
     updateOperator(name: String!, input: OperatorInput!): Operator
     deleteOperator(name: String!): Boolean

@@ -1,5 +1,5 @@
 module.exports = function(knex) {
   const result = {};
-  [].forEach(v => (result[v] = require(`./${v}`)(knex)));
+  ["classes", "operators"].forEach(v => (result[v] = require(`./${v}`)(knex)));
   return result;
 };

@@ -1,7 +1,7 @@
 module.exports = knex => {
   const result = {};
 
-  for (const key of []) {
+  for (const key of ["classes"]) {
     const resolvers = require(`./${key}.js`)(knex);
     Object.keys(resolvers).forEach(key => {
       if (result[key]) result[key] = { ...result[key], ...resolvers[key] };
