@@ -47,7 +47,7 @@ describe("Classes", () => {
       };
 
       const createRes = await axios.post(`${url}/graphql`, {
-        query: `mutation($input: ClassInput!){createClass(input: $input){name description}}`,
+        query: `mutation($input: ClassCreateInput!){createClass(input: $input){name description}}`,
         variables: { input: expectedClass }
       });
       expect(createRes.data.data.createClass).to.be.an("object");
@@ -69,7 +69,7 @@ describe("Classes", () => {
       };
 
       const updateRes = await axios.post(`${url}/graphql`, {
-        query: `mutation($input: ClassInput!){updateClass(name: "Test Class", input: $input){name description}}`,
+        query: `mutation($input: ClassUpdateInput!){updateClass(name: "Test Class", input: $input){name description}}`,
         variables: { input: expectedClass }
       });
       expect(updateRes.data.data.updateClass).to.be.an("object");
@@ -85,7 +85,7 @@ describe("Classes", () => {
       const expectedDescription = "test class description updated 2";
 
       const updateRes = await axios.post(`${url}/graphql`, {
-        query: `mutation($input: ClassInput!){updateClass(name: "Updated Class", input: $input){name description}}`,
+        query: `mutation($input: ClassUpdateInput!){updateClass(name: "Updated Class", input: $input){name description}}`,
         variables: { input: { description: expectedDescription } }
       });
       expect(updateRes.data.data.updateClass).to.be.an("object");
