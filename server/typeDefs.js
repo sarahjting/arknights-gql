@@ -21,15 +21,6 @@ const rootTypeDef = gql`
     spCost: Int
     spInitial: Int
   }
-  type Stage {
-    id: Int
-    name: String
-    operators: [Operator]
-    combatSkills: [CombatSkill]
-  }
-  input StageInput {
-    name: String!
-  }
   type Operator {
     iid: Int
     name: String
@@ -86,15 +77,13 @@ const rootTypeDef = gql`
 `;
 
 const typeDefs = [rootTypeDef];
-["classes", "factions", "origins", "races"].forEach(v =>
+["classes", "factions", "origins", "races", "stages"].forEach(v =>
   typeDefs.push(require(`./${v}/typeDefs.js`))
 );
 module.exports = typeDefs;
 
 /*
   type Query {
-    getStages: [Stage]
-    getStage(name: String, stageId: Int): Stage
     getOperators: [Operator]
     getOperator(name: String, iid: Int): Operator
     getCombatSkill(
@@ -122,9 +111,6 @@ module.exports = typeDefs;
       stage: String
       stageId: Int
     ): Boolean
-    createStage(input: StageInput!): Stage
-    updateStage(name: String, id: Int, input: StageInput!): Stage
-    deleteStage(name: String!): Boolean
   }
 
 */
