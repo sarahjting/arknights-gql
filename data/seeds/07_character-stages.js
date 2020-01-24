@@ -3,7 +3,7 @@ exports.seed = function(knex) {
   return knex("operator_stages").insert(
     data.map(row => {
       return {
-        operator_id: row.operator_id,
+        operator_id: row.character_id,
         stage_id: row.stage_id,
         hp: row.hp,
         atk: row.atk,
