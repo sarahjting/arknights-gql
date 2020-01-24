@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Vanguard",
+    "description": "class that allows you to deploy Operators more quickly"
+  },
+  {
+    "name": "Guard",
+    "description": "class that deals high melee damage"
+  },
+  {
+    "name": "Defender",
+    "description": "class with high HP and defense"
+  },
+  {
+    "name": "Specialist",
+    "description": "class that utilizes versatile ways to attack"
+  },
+  {
+    "name": "Sniper",
+    "description": "class that deals ranged physical damage"
+  },
+  {
+    "name": "Caster",
+    "description": "class that deals ranged arts damage"
+  },
+  {
+    "name": "Medic",
+    "description": "class that heals fellow Operators"
+  },
+  {
+    "name": "Supporter",
+    "description": "class that provides various support powers"
+  }
+]
