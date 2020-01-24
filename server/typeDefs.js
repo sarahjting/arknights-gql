@@ -14,13 +14,6 @@ const rootTypeDef = gql`
   input RaceInput {
     name: String!
   }
-  type Faction {
-    name: String
-    operators: [Operator]
-  }
-  input FactionInput {
-    name: String!
-  }
   type CombatSkill {
     operator: Operator
     stage: String
@@ -107,7 +100,9 @@ const rootTypeDef = gql`
 `;
 
 const typeDefs = [rootTypeDef];
-["classes"].forEach(v => typeDefs.push(require(`./${v}/typeDefs.js`)));
+["classes", "factions"].forEach(v =>
+  typeDefs.push(require(`./${v}/typeDefs.js`))
+);
 module.exports = typeDefs;
 
 /*
@@ -118,8 +113,6 @@ module.exports = typeDefs;
     getOperator(name: String, iid: Int): Operator
     getOrigins: [Origin]
     getOrigin(name: String!): Origin
-    getFactions: [Faction]
-    getFaction(name: String!): Faction
     getRaces: [Race]
     getRace(name: String!): Race
     getCombatSkill(
@@ -155,10 +148,7 @@ module.exports = typeDefs;
     deleteOrigin(name: String!): Boolean
     createRace(input: RaceInput!): Race
     updateRace(name: String!, input: RaceInput!): Race
-    deleteRace(name: String!): Boolean
-    createFaction(input: FactionInput!): Faction
-    updateFaction(name: String!, input: FactionInput!): Faction
-    deleteFaction(name: String!): Boolean
+    deleteRace(name: String!): Boolean  
   }
 
 */
