@@ -1,5 +1,5 @@
 const { gql } = require("apollo-server");
-module.exports = gql`
+const rootTypeDef = gql`
   type Origin {
     name: String
     operators: [Operator]
@@ -20,15 +20,6 @@ module.exports = gql`
   }
   input FactionInput {
     name: String!
-  }
-  type Class {
-    name: String
-    description: String
-    operators: [Operator]
-  }
-  input ClassInput {
-    name: String
-    description: String
   }
   type CombatSkill {
     operator: Operator
@@ -108,15 +99,16 @@ module.exports = gql`
     atkSpeed: Int!
   }
   type Query {
-    getClass(name: String!): Class
-    getClasses: [Class]
+    root: String
   }
   type Mutation {
-    createClass(input: ClassInput!): Class
-    updateClass(name: String!, input: ClassInput!): Class
-    deleteClass(name: String!): Boolean
+    root: String
   }
 `;
+
+const typeDefs = [rootTypeDef];
+["classes"].forEach(v => typeDefs.push(require(`./${v}/typeDefs.js`)));
+module.exports = typeDefs;
 
 /*
   type Query {

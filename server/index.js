@@ -3,8 +3,8 @@ const { ApolloServer } = require("apollo-server");
 const knex = require("knex")(require("../knexfile.js"));
 
 // The GraphQL schema
-const typeDefs = require("./schema.js");
-const models = require("./models")(knex);
+const typeDefs = require("./typeDefs.js");
+const models = require("./models.js")(knex);
 const resolvers = require("./resolvers")(models);
 
 const server = new ApolloServer({
