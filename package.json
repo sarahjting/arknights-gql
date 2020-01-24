@@ -1,0 +1,32 @@
+{
+  "name": "cc11-project.api",
+  "version": "1.0.0",
+  "description": "API solo project for Code Chrysalis Cohort 11!",
+  "main": "index.html",
+  "repository": "https://github.com/sarahjting/cc11-project.api",
+  "author": "Sarah Ting",
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn seed && mocha test",
+    "lint": "eslint --fix .",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "migrate": "knex migrate:latest --knexfile knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile knexfile.js ",
+    "seed": "knex seed:run --knexfile knexfile.js ",
+    "precommit": "pretty-quick --staged"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.16",
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^14.5.8",
+    "knex": "^0.20.8",
+    "mocha": "^7.0.0",
+    "nodemon": "^2.0.2",
+    "pg": "^7.17.1",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
+  }
+}
