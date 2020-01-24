@@ -1,12 +1,5 @@
 const { gql } = require("apollo-server");
 const rootTypeDef = gql`
-  type Race {
-    name: String
-    operators: [Operator]
-  }
-  input RaceInput {
-    name: String!
-  }
   type CombatSkill {
     operator: Operator
     stage: String
@@ -93,7 +86,7 @@ const rootTypeDef = gql`
 `;
 
 const typeDefs = [rootTypeDef];
-["classes", "factions", "origins"].forEach(v =>
+["classes", "factions", "origins", "races"].forEach(v =>
   typeDefs.push(require(`./${v}/typeDefs.js`))
 );
 module.exports = typeDefs;
@@ -104,8 +97,6 @@ module.exports = typeDefs;
     getStage(name: String, stageId: Int): Stage
     getOperators: [Operator]
     getOperator(name: String, iid: Int): Operator
-    getRaces: [Race]
-    getRace(name: String!): Race
     getCombatSkill(
       characterName: String!
       stage: String
@@ -134,9 +125,6 @@ module.exports = typeDefs;
     createStage(input: StageInput!): Stage
     updateStage(name: String, id: Int, input: StageInput!): Stage
     deleteStage(name: String!): Boolean
-    createRace(input: RaceInput!): Race
-    updateRace(name: String!, input: RaceInput!): Race
-    deleteRace(name: String!): Boolean  
   }
 
 */
