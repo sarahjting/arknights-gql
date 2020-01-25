@@ -1,14 +1,13 @@
 {
-  "name": "cc11-project.api",
+  "name": "arknights-gql",
   "version": "1.0.0",
-  "description": "API solo project for Code Chrysalis Cohort 11!",
+  "description": "Solo project for Code Chrysalis Cohort 11; graphQL API that manages Arknights character data.",
   "main": "index.html",
-  "repository": "https://github.com/sarahjting/cc11-project.api",
+  "repository": "https://github.com/sarahjting/arknights-gql",
   "author": "Sarah Ting",
   "license": "MIT",
   "scripts": {
     "test": "yarn seed && mocha test",
-    "lint": "eslint --fix .",
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
     "migrate": "knex migrate:latest --knexfile knexfile.js",
