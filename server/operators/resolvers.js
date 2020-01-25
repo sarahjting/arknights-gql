@@ -48,6 +48,9 @@ module.exports = models => {
           operator_id: operator.id
         });
       },
+      combatSkills: operator => {
+        return models.combatSkills.getAll({ operator_id: operator.id });
+      },
       finalStage: operator => {
         return models.operatorStages.get(
           { operator_id: operator.id },

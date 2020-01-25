@@ -37,11 +37,19 @@ describe("Combat Skills", () => {
       expect(res.data.data.getCombatSkill).to.have.property("spCost");
       expect(res.data.data.getCombatSkill).to.have.property("spInitial");
     });
-    it("should not return a combatSkill that does not exist", async () => {
+    it("should not return a combat skill that does not exist", async () => {
       const res = await axios.post(`${url}/graphql`, {
         query: `query{getCombatSkill(operator:"FAKE",stage:"FAKE"){description}}`
       });
       expect(res.data.data.getCombatSkill).to.equal(null);
+    });
+    it("should return all of an operator's combat skills with the operator query", async () => {
+      const res = await axios.post(`${url}/graphql`, {
+        query: `query{getOperator(name: "Exusiai"){ combatSkills{description} }}`
+      });
+      const data = res.data.data.getOperator;
+      expect(data).to.be.an("object");
+      expect(data).to.have.property("combatSkills");
     });
   });
   describe("Mutations", () => {
