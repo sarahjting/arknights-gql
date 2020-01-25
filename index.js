@@ -13,7 +13,9 @@ const resolvers = require("./server/resolvers")(models);
 // apollo set up
 const apolloServer = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  introspection: true,
+  playground: true
 });
 
 // express set up
