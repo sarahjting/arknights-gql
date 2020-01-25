@@ -5,7 +5,9 @@ module.exports = knex => {
       return (await this._knex().where(where)).pop();
     },
     getAll: async function(where) {
-      return await this._knex().where(where);
+      const query = this._knex();
+      if (where) query.where(where);
+      return await query;
     },
     create: async function(input) {
       const ids = await this._knex().insert(await this._formatInput(input), [
@@ -26,7 +28,7 @@ module.exports = knex => {
         "redeploy",
         "atk_speed"
       ]);
-      const result = await this._knex()
+      await this._knex()
         .where(whereParams)
         .update(updateParams);
       return this.get(whereParams);
@@ -46,7 +48,7 @@ module.exports = knex => {
           const row = await knex(key === "class" ? "classes" : `${key}s`)
             .select("id")
             .where("name", input[key]);
-          if (row.length) result[`${key}_id`] = row[0].id;
+          result[`${key}_id`] = row.length ? row[0].id : null;
         }
       }
       [
