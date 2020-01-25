@@ -1,5 +1,6 @@
 require("dotenv").config();
 const axios = require("axios");
+const races = require("../data/json/races.json");
 const { expect } = require("chai");
 const url = `http://localhost:${process.env.PORT}`;
 
@@ -10,7 +11,7 @@ describe("Races", () => {
         query: "query{getRaces{name}}"
       });
       expect(res.data.data.getRaces).to.be.an("array");
-      expect(res.data.data.getRaces.length).to.equal(28);
+      expect(res.data.data.getRaces.length).to.equal(races.length);
       expect(res.data.data.getRaces[0]).to.have.property("name");
     });
     it("should return a single race", async () => {
@@ -54,7 +55,7 @@ describe("Races", () => {
         query: `query{getRaces{name}}`
       });
       expect(getRes.data.data.getRaces).to.be.an("array");
-      expect(getRes.data.data.getRaces.length).to.equal(29);
+      expect(getRes.data.data.getRaces.length).to.equal(races.length + 1);
       expect(
         getRes.data.data.getRaces[getRes.data.data.getRaces.length - 1]
       ).to.deep.equal(expected);
@@ -98,7 +99,7 @@ describe("Races", () => {
         query: `query{getRaces{name}}`
       });
       expect(getRes.data.data.getRaces).to.be.an("array");
-      expect(getRes.data.data.getRaces.length).to.equal(28);
+      expect(getRes.data.data.getRaces.length).to.equal(races.length);
       const checkRes = await axios.post(`${url}/graphql`, {
         query: `query{getRace(name:"Test Race Updated"){name}}`
       });
