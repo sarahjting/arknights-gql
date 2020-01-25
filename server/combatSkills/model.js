@@ -7,11 +7,7 @@ module.exports = knex => {
       return await query;
     },
     get: async function(where) {
-      where = await this._formatInput(where);
-      console.log(where);
-      const result = await this._knex().where(where);
-      console.log(result);
-      return result.pop();
+      return (await this._knex().where(await this._formatInput(where))).pop();
     },
     create: async function(input) {
       const ids = await this._knex().insert(await this._formatInput(input), [
