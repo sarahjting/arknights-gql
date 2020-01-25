@@ -8,9 +8,27 @@ module.exports = knex => {
           : this._knex().where(where);
       return (await query).pop();
     },
-    getAll: async function(where) {
+    getAll: async function(where, orderBy) {
       const query = this._knex();
-      if (where) query.where(where);
+      if (where) query.where(await this._formatInput(where));
+      if (orderBy) {
+        if (["id", "rarity"].includes(orderBy)) {
+          query.orderBy(orderBy, "DESC");
+        } else {
+          query
+            .from({
+              operators: "operators",
+              t1: knex("operator_stages")
+                .select(
+                  "operator_id",
+                  knex.raw(`MAX(${orderBy}) AS ${orderBy}`)
+                )
+                .groupBy("operator_id")
+            })
+            .where("t1.operator_id", knex.raw(`operators.id`))
+            .orderBy(`t1.${orderBy}`, `DESC`);
+        }
+      }
       return await query;
     },
     getAllByStageId: async function(stageId) {
@@ -61,7 +79,11 @@ module.exports = knex => {
         "raceId",
         "factionId",
         "classId",
-        "isRanged"
+        "isRanged",
+        "class_id",
+        "faction_id",
+        "race_id",
+        "origin_id"
       ].forEach(key => {
         if (input[key] !== undefined) result[_.snakeCase(key)] = input[key];
       });

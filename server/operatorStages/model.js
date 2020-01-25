@@ -2,7 +2,6 @@ const _ = require("lodash");
 module.exports = knex => {
   return {
     get: async function(where, opts = {}) {
-      console.log(opts);
       const query = this._knex().where(where);
       if (opts.orderBy) query.orderBy(opts.orderBy);
       return (await query).pop();

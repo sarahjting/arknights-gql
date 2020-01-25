@@ -21,6 +21,44 @@ describe("Operators", () => {
       expect(res.data.data.getOperators[0]).to.have.property("class");
       expect(res.data.data.getOperators[0]).to.have.property("faction");
     });
+    it("should filter operators", async () => {
+      const res = await axios.post(`${url}/graphql`, {
+        query: `query($where: OperatorWhereInput){
+          getOperators(where: $where){name rarity iid origin{name} race{name} class{name} faction{name} isRanged}
+        }`,
+        variables: {
+          where: { class: "Vanguard" }
+        }
+      });
+      expect(res.data.data.getOperators).to.be.an("array");
+      expect(res.data.data.getOperators.length).to.equal(10);
+    });
+    it("should filter operators by multiple filters", async () => {
+      const res = await axios.post(`${url}/graphql`, {
+        query: `query($where: OperatorWhereInput){
+          getOperators(where: $where){name rarity iid origin{name} race{name} class{name} faction{name} isRanged}
+        }`,
+        variables: {
+          where: { class: "Vanguard", rarity: 6 }
+        }
+      });
+      expect(res.data.data.getOperators).to.be.an("array");
+      expect(res.data.data.getOperators.length).to.equal(1);
+    });
+    it("should sort operators", async () => {
+      const res = await axios.post(`${url}/graphql`, {
+        query: `query($where: OperatorWhereInput, $orderBy: OperatorOrderBy){
+            getOperators(where: $where, orderBy: $orderBy){name rarity iid origin{name} race{name} class{name} faction{name} isRanged}
+          }`,
+        variables: {
+          where: { class: "Vanguard" },
+          orderBy: "atk"
+        }
+      });
+      expect(res.data.data.getOperators).to.be.an("array");
+      expect(res.data.data.getOperators.length).to.equal(10);
+      expect(res.data.data.getOperators[0].name).to.equal("Vigna");
+    });
     it("should return a single operator by name with all fields", async () => {
       const res = await axios.post(`${url}/graphql`, {
         query: `query{getOperator(name: "Exusiai"){name rarity iid origin{name} race{name} class{name} faction{name} isRanged}}`
@@ -63,13 +101,12 @@ describe("Operators", () => {
       expect(createRes.data.data.createOperator.name).to.equal("Operator");
 
       const getRes = await axios.post(`${url}/graphql`, {
-        query: `query{getOperators{name rarity iid origin{name} race{name} class{name} faction{name} isRanged}}`
+        query: `query($orderBy: OperatorOrderBy){getOperators(orderBy:$orderBy){name rarity iid origin{name} race{name} class{name} faction{name} isRanged}}`,
+        variables: { orderBy: "id" }
       });
       expect(getRes.data.data.getOperators).to.be.an("array");
       expect(getRes.data.data.getOperators.length).to.equal(85);
-      expect(
-        getRes.data.data.getOperators[getRes.data.data.getOperators.length - 1]
-      ).to.deep.equal({
+      expect(getRes.data.data.getOperators[0]).to.deep.equal({
         name: "Operator",
         rarity: 6,
         iid: 0,

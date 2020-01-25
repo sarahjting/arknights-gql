@@ -33,8 +33,29 @@ module.exports = gql`
     race: String
     isRanged: Boolean
   }
+  input OperatorWhereInput {
+    rarity: Int
+    faction: String
+    race: String
+    class: String
+  }
+  enum OperatorOrderBy {
+    rarity
+    hp
+    atk
+    def
+    cost
+    block
+    res
+    redeploy
+    atkSpeed
+    id
+  }
   extend type Query {
-    getOperators: [Operator]
+    getOperators(
+      where: OperatorWhereInput
+      orderBy: OperatorOrderBy
+    ): [Operator]
     getOperator(name: String, iid: Int): Operator
   }
   extend type Mutation {

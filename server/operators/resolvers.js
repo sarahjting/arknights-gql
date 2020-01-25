@@ -2,7 +2,10 @@ module.exports = models => {
   return {
     Query: {
       getOperators: (parent, args) => {
-        return models.operators.getAll();
+        return models.operators.getAll(
+          args.where ? args.where : {},
+          args.orderBy ? args.orderBy : "rarity"
+        );
       },
       getOperator: (parent, args) => {
         return models.operators.get({ name: args.name });
