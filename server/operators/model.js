@@ -11,10 +11,12 @@ module.exports = knex => {
     getAll: async function(where, orderBy) {
       const query = this._knex();
       if (where) query.where(await this._formatInput(where));
+      console.log(where, orderBy);
       if (orderBy) {
         if (["id", "rarity"].includes(orderBy)) {
           query.orderBy(orderBy, "DESC");
         } else {
+          orderBy = _.snakeCase(orderBy);
           query
             .from({
               operators: "operators",

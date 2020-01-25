@@ -2,6 +2,7 @@ module.exports = models => {
   return {
     Query: {
       getOperators: (parent, args) => {
+        console.log("resolver", args);
         return models.operators.getAll(
           args.where ? args.where : {},
           args.orderBy ? args.orderBy : "rarity"

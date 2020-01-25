@@ -30,13 +30,18 @@ function loadForm() {
   query("query{getClasses{name} getRaces{name} getFactions{name}}").then(
     data => {
       data.getClasses.forEach(v => {
-        $($(".class-select")[0]).append(`<option>${v.name}</option>`);
+        $(".class-select").append(`<option>${v.name}</option>`);
       });
       data.getRaces.forEach(v => {
-        $($(".race-select")[0]).append(`<option>${v.name}</option>`);
+        $(".race-select").append(`<option>${v.name}</option>`);
       });
       data.getFactions.forEach(v => {
-        $($(".faction-select")[0]).append(`<option>${v.name}</option>`);
+        $(".faction-select").append(`<option>${v.name}</option>`);
+      });
+      $(
+        ".faction-select, .class-select, .race-select, .rarity-select, .order-select"
+      ).on("change", () => {
+        loadOperators();
       });
       $(".form-wrapper").removeClass("hide");
     }
@@ -144,10 +149,29 @@ function loadOperator(name) {
     });
   });
 }
+function getFormWhere() {
+  const where = {};
+  ["class", "race", "faction", "rarity"].forEach(k => {
+    const v = $(`.${k}-select :selected`).val();
+    if (v) where[k] = k === "rarity" ? Number(v) : v;
+  });
+  return where;
+}
+function getFormOrderBy() {
+  return $(".order-select :selected").val();
+}
 function loadOperators(where) {
-  let q =
-    "query{getOperators{name rarity isRanged class{name} faction{name} finalStage{stage{name} hp atk def cost block res redeploy atkSpeed}}}";
-  query(q).then(data => {
+  let q = `query($where: OperatorWhereInput, $orderBy: OperatorOrderBy){
+      getOperators(where: $where, orderBy: $orderBy){
+          name rarity isRanged 
+          class{name} faction{name} 
+          finalStage{stage{name} hp atk def cost block res redeploy atkSpeed}
+        }
+    }`;
+  query(q, {
+    where: getFormWhere(),
+    orderBy: getFormOrderBy()
+  }).then(data => {
     $(".operators").html("");
     if (data.getOperators.length == 0) {
       $(".operators").html("No operators found!");
@@ -187,7 +211,7 @@ function loadOperators(where) {
         });
 
         $(newRow).removeClass("hide");
-        $(".operators").prepend(newRow);
+        $(".operators").append(newRow);
         $(".thumb", newRow).click(() => loadOperator(v.name));
         $(".title", newRow).click(() => loadOperator(v.name));
       });
