@@ -1,6 +1,6 @@
 [
   {
-    "character_id": 76,
+    "operator_id": 76,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 25%, Attack speed +25",
@@ -11,7 +11,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 74,
+    "operator_id": 74,
     "name": "",
     "stage_id": 1,
     "description": "Immediately obtain 6 cost, Attack + 35%",
@@ -22,7 +22,7 @@
     "sp_initial": 6
   },
   {
-    "character_id": 68,
+    "operator_id": 68,
     "name": "",
     "stage_id": 1,
     "description": "Immediately obtain 6 cost",
@@ -33,7 +33,7 @@
     "sp_initial": 6
   },
   {
-    "character_id": 57,
+    "operator_id": 57,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 80%",
@@ -44,7 +44,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 57,
+    "operator_id": 57,
     "name": "",
     "stage_id": 2,
     "description": "Slightly increase attack interval(+ 0.5 seconds), Attack + 200%",
@@ -55,7 +55,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 51,
+    "operator_id": 51,
     "name": "",
     "stage_id": 1,
     "description": "Immediately obtain 9 cost",
@@ -66,7 +66,7 @@
     "sp_initial": 13
   },
   {
-    "character_id": 51,
+    "operator_id": 51,
     "name": "",
     "stage_id": 2,
     "description": "Immediately obtain 11 cost. Attack +70%",
@@ -77,7 +77,7 @@
     "sp_initial": 18
   },
   {
-    "character_id": 61,
+    "operator_id": 61,
     "name": "",
     "stage_id": 1,
     "description": "Immediately obtain 9 cost",
@@ -88,7 +88,7 @@
     "sp_initial": 13
   },
   {
-    "character_id": 61,
+    "operator_id": 61,
     "name": "",
     "stage_id": 2,
     "description": "Immediately obtain 3 cost. Gradually obtain 8 cost while the skill is active, additionally Defense + 80%",
@@ -99,7 +99,7 @@
     "sp_initial": 17
   },
   {
-    "character_id": 26,
+    "operator_id": 26,
     "name": "",
     "stage_id": 1,
     "description": "Immediately Obtain 12 Cost",
@@ -110,7 +110,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 26,
+    "operator_id": 26,
     "name": "",
     "stage_id": 2,
     "description": "Gradually obtain 12 cost while the skill is active. Increases Attack and Defense of all Vangaurds by 60%, additionally obtain 1 cost when killing an enemy",
@@ -121,7 +121,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 30,
+    "operator_id": 30,
     "name": "",
     "stage_id": 1,
     "description": "Immediately Obtain 12 Cost",
@@ -132,7 +132,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 30,
+    "operator_id": 30,
     "name": "",
     "stage_id": 2,
     "description": "Immediately obtain 12 cost. Deal 170% magical damage twice to all nearby enemies and stun them for 3 seconds",
@@ -143,7 +143,7 @@
     "sp_initial": 30
   },
   {
-    "character_id": 2,
+    "operator_id": 2,
     "name": "",
     "stage_id": 1,
     "description": "Immediately Obtain 12 Cost",
@@ -154,7 +154,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 2,
+    "operator_id": 2,
     "name": "",
     "stage_id": 2,
     "description": "The next attack deals 340% physical damage to all adjacent enemies. Additionally, obtain 3 cost. Can hold 3 charges",
@@ -165,7 +165,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 2,
+    "operator_id": 2,
     "name": "",
     "stage_id": 3,
     "description": "Increase attack interval (+1 seconds), every attack deals 380% damage and has 40% chance to stun the target for 1.5 seconds",
@@ -176,7 +176,7 @@
     "sp_initial": 25
   },
   {
-    "character_id": 72,
+    "operator_id": 72,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 50%",
@@ -187,7 +187,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 79,
+    "operator_id": 79,
     "name": "",
     "stage_id": 1,
     "description": "The next attack hits 2 times, with each hit dealing 140% damage",
@@ -198,7 +198,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 37,
+    "operator_id": 37,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals 230% damage",
@@ -209,7 +209,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 37,
+    "operator_id": 37,
     "name": "",
     "stage_id": 2,
     "description": "Attack + 80%, gain 75% physical and magic evasion",
@@ -220,7 +220,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 67,
+    "operator_id": 67,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals 180% damage and inflicts -35% defense to the target for 5 seconds",
@@ -231,7 +231,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 67,
+    "operator_id": 67,
     "name": "",
     "stage_id": 2,
     "description": "Immediately deal 200% physical damage to up to 5 enemies within attack range and inflict -40% Defense to targets for 5 seconds",
@@ -242,7 +242,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 63,
+    "operator_id": 63,
     "name": "",
     "stage_id": 1,
     "description": "Increase Attack range by 2 tiles",
@@ -253,7 +253,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 63,
+    "operator_id": 63,
     "name": "",
     "stage_id": 2,
     "description": "Attack with spinning blades, inflicting -35% movement speed and dealing 80% magical damage per second for a short duration",
@@ -264,7 +264,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 11,
+    "operator_id": 11,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 100%",
@@ -275,7 +275,7 @@
     "sp_initial": 15
   },
   {
-    "character_id": 11,
+    "operator_id": 11,
     "name": "",
     "stage_id": 2,
     "description": "Slightly decrease attack speed(-20), however Attack + 100% and increase attack range. Infinite duration",
@@ -286,7 +286,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 16,
+    "operator_id": 16,
     "name": "",
     "stage_id": 1,
     "description": "Increase the splash area of the next attack, dealing 215% physical damage",
@@ -297,7 +297,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 16,
+    "operator_id": 16,
     "name": "",
     "stage_id": 2,
     "description": "Immediately fire a flame bomb, dealing 300% physical damage to all enemies within the attack area and inflicting -330 Defence for 10 seconds",
@@ -308,7 +308,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 28,
+    "operator_id": 28,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 70% and gain hidden status(will not be targeted by ranged enemies)",
@@ -319,7 +319,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 28,
+    "operator_id": 28,
     "name": "",
     "stage_id": 2,
     "description": "Immediately drop 3 bombs randomly within attack range(will prioritize position with enemies). Each bomb deals 300% physical damage to all nearby enemies",
@@ -330,7 +330,7 @@
     "sp_initial": 30
   },
   {
-    "character_id": 36,
+    "operator_id": 36,
     "name": "",
     "stage_id": 1,
     "description": "The next attack will hit an additional target, dealing 200% physical damage",
@@ -341,7 +341,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 36,
+    "operator_id": 36,
     "name": "",
     "stage_id": 2,
     "description": "Attack + 50%, every attack hits the main target a second time as well as an additional 2 enemies",
@@ -352,7 +352,7 @@
     "sp_initial": 25
   },
   {
-    "character_id": 21,
+    "operator_id": 21,
     "name": "",
     "stage_id": 1,
     "description": "Increase damage dealy to the target by +25% for every 20% HP the enemies loses",
@@ -363,7 +363,7 @@
     "sp_initial": null
   },
   {
-    "character_id": 21,
+    "operator_id": 21,
     "name": "",
     "stage_id": 2,
     "description": "Attack +220%, however normal attacks no longer target enemies with higher than 80% HP",
@@ -374,7 +374,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 1,
+    "operator_id": 1,
     "name": "",
     "stage_id": 1,
     "description": "The next attack hits 3 times, with each hit dealing 145% dmg",
@@ -385,7 +385,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 1,
+    "operator_id": 1,
     "name": "",
     "stage_id": 2,
     "description": "Attacks deal 4 hits, with each hit dealing 125% dmg",
@@ -396,7 +396,7 @@
     "sp_initial": 25
   },
   {
-    "character_id": 1,
+    "operator_id": 1,
     "name": "",
     "stage_id": 3,
     "description": "Attacks deal 5 hits, with each hit dealing 110% damage. Reduce attack interval to a certain extent(-0.11s)",
@@ -407,7 +407,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 70,
+    "operator_id": 70,
     "name": "",
     "stage_id": 1,
     "description": "Attack Range + 2 tiles, Attack + 40%",
@@ -418,7 +418,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 62,
+    "operator_id": 62,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 50%",
@@ -429,7 +429,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 54,
+    "operator_id": 54,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 70%",
@@ -440,7 +440,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 54,
+    "operator_id": 54,
     "name": "",
     "stage_id": 2,
     "description": "Attack speed -50, Attack + 250%",
@@ -451,7 +451,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 43,
+    "operator_id": 43,
     "name": "",
     "stage_id": 1,
     "description": "On the next heal, additionally heal the target for 35% of Gavial's Attack per second (70% when HP is below 1/2) for 5 seconds. Can hold 2 charges",
@@ -462,7 +462,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 43,
+    "operator_id": 43,
     "name": "",
     "stage_id": 2,
     "description": "Heal all allies within range for 30% of Gavial's Attack per second (80% when HP is below 1/2) for 10 seconds",
@@ -473,7 +473,7 @@
     "sp_initial": 50
   },
   {
-    "character_id": 46,
+    "operator_id": 46,
     "name": "",
     "stage_id": 1,
     "description": "The next heal will recover HP equal to 125% Attack and heal an addtional target. Can hold 3 charges",
@@ -484,7 +484,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 46,
+    "operator_id": 46,
     "name": "",
     "stage_id": 2,
     "description": "Attack +65%, heal an addtional target on every heal",
@@ -495,7 +495,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 24,
+    "operator_id": 24,
     "name": "",
     "stage_id": 1,
     "description": "The next heal will heal an addtional 25% of the target's Max HP. This effect will only activate when the target has less than 1/2 HP remaining. Can hold 4 charges",
@@ -506,7 +506,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 24,
+    "operator_id": 24,
     "name": "",
     "stage_id": 2,
     "description": "Grants the following effects to self and a random ally within attack range: Attack + 90%, however lose 3% Max HP every second, lasting for 15 seconds",
@@ -517,7 +517,7 @@
     "sp_initial": 50
   },
   {
-    "character_id": 31,
+    "operator_id": 31,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 90%",
@@ -528,7 +528,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 31,
+    "operator_id": 31,
     "name": "",
     "stage_id": 2,
     "description": "Increases attack range, massively reduce attack interval (-2.1 seconds)",
@@ -539,7 +539,7 @@
     "sp_initial": 85
   },
   {
-    "character_id": 22,
+    "operator_id": 22,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 90%",
@@ -550,7 +550,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 22,
+    "operator_id": 22,
     "name": "",
     "stage_id": 2,
     "description": "Obtain a healing drone. Able to store up to 1 drone. Drones will heal nearby allies after being deployed and self-destruct after 10 seconds",
@@ -561,7 +561,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 10,
+    "operator_id": 10,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 80%, Attack speed + 20",
@@ -572,7 +572,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 10,
+    "operator_id": 10,
     "name": "",
     "stage_id": 2,
     "description": "The next heal will grant a shield to the target that lasts for 3s. The shield can absorb damage equal to 50% of Shining's Attack. Additionally, it increases the target's Defense by 50%. Can hold 3 charges",
@@ -583,7 +583,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 10,
+    "operator_id": 10,
     "name": "",
     "stage_id": 3,
     "description": "Attack + 50%. Increases the Defense of all allies within attack range by 100%",
@@ -594,7 +594,7 @@
     "sp_initial": 115
   },
   {
-    "character_id": 6,
+    "operator_id": 6,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 90%",
@@ -605,7 +605,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 6,
+    "operator_id": 6,
     "name": "",
     "stage_id": 2,
     "description": "The next heal will grant shields to all targets that lasts for 5s. The shields can absorb magical damage equal to 90% of Nightingale's Attack. Additionally, they increase the target's Magic resistence by 20. Can hold 3 charges",
@@ -616,7 +616,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 6,
+    "operator_id": 6,
     "name": "",
     "stage_id": 3,
     "description": "Increases attack range, Attack + 80%. All allies within attack range gain +150% Magic resistance and 25% magic evasion",
@@ -627,7 +627,7 @@
     "sp_initial": 115
   },
   {
-    "character_id": 71,
+    "operator_id": 71,
     "name": "",
     "stage_id": 1,
     "description": "Immediately recover 40% of Max HP",
@@ -638,7 +638,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 83,
+    "operator_id": 83,
     "name": "",
     "stage_id": 1,
     "description": "Defense + 50%",
@@ -649,7 +649,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 48,
+    "operator_id": 48,
     "name": "",
     "stage_id": 1,
     "description": "Max HP + 70%, recover 40 HP every second",
@@ -660,7 +660,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 48,
+    "operator_id": 48,
     "name": "",
     "stage_id": 2,
     "description": "Max HP + 50%, Defense + 30%, Magic Resistance + 100%",
@@ -671,7 +671,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 44,
+    "operator_id": 44,
     "name": "",
     "stage_id": 1,
     "description": "The Next attack will heal a nearby ally for 160% of Gummy's Attack. Can hold 3 charges",
@@ -682,7 +682,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 44,
+    "operator_id": 44,
     "name": "",
     "stage_id": 2,
     "description": "Begins cooking and stops attacking enemies for 10 seconds, Defense + 80%. After finishing cooking, focuses on healing nearby allies ( attack interval + 1.3 seconds), Attack + 80%",
@@ -693,7 +693,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 42,
+    "operator_id": 42,
     "name": "",
     "stage_id": 1,
     "description": "Defense + 80%",
@@ -704,7 +704,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 42,
+    "operator_id": 42,
     "name": "",
     "stage_id": 2,
     "description": "Stops attacking enemies. Block count + 1, Defense + 130%, recover 3% Max HP every second",
@@ -715,7 +715,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 18,
+    "operator_id": 18,
     "name": "",
     "stage_id": 1,
     "description": "Defense + 70%, talent increase to 200%",
@@ -726,7 +726,7 @@
     "sp_initial": 12
   },
   {
-    "character_id": 18,
+    "operator_id": 18,
     "name": "",
     "stage_id": 2,
     "description": "Push away nearby enemies with huge force and stun them for 4 seconds, dealing 480% physical damage",
@@ -737,7 +737,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 33,
+    "operator_id": 33,
     "name": "",
     "stage_id": 1,
     "description": "Block count + 1, Defense 120%, additionally recover 5% Max HP every second",
@@ -748,7 +748,7 @@
     "sp_initial": 40
   },
   {
-    "character_id": 33,
+    "operator_id": 33,
     "name": "",
     "stage_id": 2,
     "description": "Block count - 1, slightly increase attack interval(+0.4s), Attack + 150%, every attack recovers 10% Max HP, attack multiple enemies equal to block count",
@@ -759,7 +759,7 @@
     "sp_initial": 40
   },
   {
-    "character_id": 35,
+    "operator_id": 35,
     "name": "",
     "stage_id": 1,
     "description": "Block the next attack and increase Defense by +100% for 8 seconds",
@@ -770,7 +770,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 35,
+    "operator_id": 35,
     "name": "",
     "stage_id": 2,
     "description": "Increase attack interval(+0.7s), Attack + 200%, every attack deals magic damage to up to 4 enemies and has 25% chance to stun the targets for 1 second. Liskarm is stunned for 5 seconds after skill ends",
@@ -781,7 +781,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 39,
+    "operator_id": 39,
     "name": "",
     "stage_id": 1,
     "description": "The next attack will heal a nearby ally with less than 1/2 HP for 180% Attack. Can hold 3 charges",
@@ -792,7 +792,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 39,
+    "operator_id": 39,
     "name": "",
     "stage_id": 2,
     "description": "Attack + 80%, stops attacking enemies and focuses on healing nearby allies(attack interval +1.3s)",
@@ -803,7 +803,7 @@
     "sp_initial": 30
   },
   {
-    "character_id": 5,
+    "operator_id": 5,
     "name": "",
     "stage_id": 1,
     "description": "The next attack will heal a nearby ally with less than 1/2 HP for 180% Attack. Can hold 3 charges",
@@ -814,7 +814,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 5,
+    "operator_id": 5,
     "name": "",
     "stage_id": 2,
     "description": "Heal all allies within a certain range for 140% of Saria's Attack",
@@ -825,7 +825,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 5,
+    "operator_id": 5,
     "name": "",
     "stage_id": 3,
     "description": "All nearby allies are healed for 35% of Saria's Attack every second. Additionally, all nearby enemies receive +55% magic damage taken and -60% movement speed",
@@ -836,7 +836,7 @@
     "sp_initial": 70
   },
   {
-    "character_id": 12,
+    "operator_id": 12,
     "name": "",
     "stage_id": 1,
     "description": "Defense + 80%, Attack + 40%",
@@ -847,7 +847,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 12,
+    "operator_id": 12,
     "name": "",
     "stage_id": 2,
     "description": "Defense + 30%. Every time Hoshiguma is attacked, inflict 100% physical damage to the attacker",
@@ -858,7 +858,7 @@
     "sp_initial": null
   },
   {
-    "character_id": 12,
+    "operator_id": 12,
     "name": "",
     "stage_id": 3,
     "description": "Attack + 140%, Defense +90%. Slice all enemies 1 tile ahead using her shield",
@@ -869,7 +869,7 @@
     "sp_initial": 30
   },
   {
-    "character_id": 66,
+    "operator_id": 66,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 25%, Attack speed + 25",
@@ -880,7 +880,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 53,
+    "operator_id": 53,
     "name": "",
     "stage_id": 1,
     "description": "Attack + 80%",
@@ -891,7 +891,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 53,
+    "operator_id": 53,
     "name": "",
     "stage_id": 2,
     "description": "Stops attacking enemies. All enemies within attack range get stopped once every 1.4s",
@@ -902,7 +902,7 @@
     "sp_initial": 15
   },
   {
-    "character_id": 49,
+    "operator_id": 49,
     "name": "",
     "stage_id": 1,
     "description": "All tentacles gain +60% Attack and defense, and recover 70 HP every second",
@@ -913,7 +913,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 49,
+    "operator_id": 49,
     "name": "",
     "stage_id": 2,
     "description": "Increase attack range. All allies within attack range gain 50% physical evasion",
@@ -924,7 +924,7 @@
     "sp_initial": 60
   },
   {
-    "character_id": 40,
+    "operator_id": 40,
     "name": "",
     "stage_id": 1,
     "description": "Increase attack range, all enemies within attack range enter sleep status(stun+invulnerable). Additionally, trait effect increases to 100%",
@@ -935,7 +935,7 @@
     "sp_initial": 45
   },
   {
-    "character_id": 40,
+    "operator_id": 40,
     "name": "",
     "stage_id": 2,
     "description": "All allies within attack range gain Attack equal to 100% of Sora's Attack",
@@ -946,7 +946,7 @@
     "sp_initial": 25
   },
   {
-    "character_id": 32,
+    "operator_id": 32,
     "name": "",
     "stage_id": 1,
     "description": "All mechanical otters gain 35% physical and magic evasion. Allies adjacent to them also gain the same effect",
@@ -957,7 +957,7 @@
     "sp_initial": null
   },
   {
-    "character_id": 32,
+    "operator_id": 32,
     "name": "",
     "stage_id": 2,
     "description": "Immediately detonate all deployed mechanical otters, dealing 600% magical damage to nearby enemies and stunning them for 2s. All detonated mechanical otters will be retrieved",
@@ -968,7 +968,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 27,
+    "operator_id": 27,
     "name": "",
     "stage_id": 1,
     "description": "Massively reduce attack interval(-1.1s)",
@@ -979,7 +979,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 27,
+    "operator_id": 27,
     "name": "",
     "stage_id": 2,
     "description": "Attack + 75%, increase attack range and attack 2 additional targets",
@@ -990,7 +990,7 @@
     "sp_initial": 30
   },
   {
-    "character_id": 29,
+    "operator_id": 29,
     "name": "",
     "stage_id": 1,
     "description": "Attack 2 targets simultaneously. All enemies within range have -60 attack speed",
@@ -1001,7 +1001,7 @@
     "sp_initial": 25
   },
   {
-    "character_id": 29,
+    "operator_id": 29,
     "name": "",
     "stage_id": 2,
     "description": "All enemies within attack range have -60% Defense and -30% Magic Resistance",
@@ -1012,7 +1012,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 4,
+    "operator_id": 4,
     "name": "",
     "stage_id": 1,
     "description": "Attack +110%",
@@ -1023,7 +1023,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 4,
+    "operator_id": 4,
     "name": "",
     "stage_id": 2,
     "description": "Massively reduce attack interval(reduced to 0.15s), however every attack will only deal 45% magical damage. Unable to attack when skill is not active",
@@ -1034,7 +1034,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 4,
+    "operator_id": 4,
     "name": "",
     "stage_id": 3,
     "description": "Reduced the weight of all enemies by 1 level. Increase attack range, Attack + 150%, attack 5 enemies simultaneously. Unable to attack when skill is not active",
@@ -1045,7 +1045,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 69,
+    "operator_id": 69,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals 190% damage",
@@ -1056,7 +1056,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 80,
+    "operator_id": 80,
     "name": "",
     "stage_id": 1,
     "description": "Attack speed + 50",
@@ -1067,7 +1067,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 60,
+    "operator_id": 60,
     "name": "",
     "stage_id": 1,
     "description": "Attack speed + 75",
@@ -1078,7 +1078,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 60,
+    "operator_id": 60,
     "name": "",
     "stage_id": 2,
     "description": "Attack + 100%, increase attack range and attack all enemies within range simultaneously. Stops attacking for 10 seconds after skill ends",
@@ -1089,7 +1089,7 @@
     "sp_initial": 50
   },
   {
-    "character_id": 55,
+    "operator_id": 55,
     "name": "",
     "stage_id": 1,
     "description": "Attack +80%",
@@ -1100,7 +1100,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 55,
+    "operator_id": 55,
     "name": "",
     "stage_id": 2,
     "description": "Max HP -75%, Attack +60%, Attack speed + 60",
@@ -1111,7 +1111,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 13,
+    "operator_id": 13,
     "name": "",
     "stage_id": 1,
     "description": "Attack +100%",
@@ -1122,7 +1122,7 @@
     "sp_initial": 15
   },
   {
-    "character_id": 13,
+    "operator_id": 13,
     "name": "",
     "stage_id": 2,
     "description": "Increase attack interval(+0.7s), attack changes to summoning comets from the sky. Comets require time to reach the ground. They deal 240% magical damage to enemies in a large area and stun them for 1s",
@@ -1133,7 +1133,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 20,
+    "operator_id": 20,
     "name": "",
     "stage_id": 1,
     "description": "Attack speed + 90",
@@ -1144,7 +1144,7 @@
     "sp_initial": 15
   },
   {
-    "character_id": 20,
+    "operator_id": 20,
     "name": "",
     "stage_id": 2,
     "description": "Every attack deals 8 hits at 60% damage each to random enemies within attack range. Amiya is stunned for 10s after the skill ends",
@@ -1155,7 +1155,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 20,
+    "operator_id": 20,
     "name": "",
     "stage_id": 3,
     "description": "Attack +230%, Max HP +100%, increase attack range, attacks ignore Defense and Magic Resistence. Amiya is forcibly retreated after skill ends",
@@ -1166,7 +1166,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 7,
+    "operator_id": 7,
     "name": "",
     "stage_id": 1,
     "description": "Attack speed + 60. On the 2nd cast and onwards, additionally increase Attack by +60%",
@@ -1177,7 +1177,7 @@
     "sp_initial": 25
   },
   {
-    "character_id": 7,
+    "operator_id": 7,
     "name": "",
     "stage_id": 2,
     "description": "The next attack deals 370% magical damage, with enemies nearby the target receiving half the damage. Additionally, inflict -25% Magic resistance to all targets for 6s. Can hold 3 charges",
@@ -1188,7 +1188,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 7,
+    "operator_id": 7,
     "name": "",
     "stage_id": 3,
     "description": "Attack +130%, increase attack range, greatly reduce attack interval(-1.1s). Attacks by firing lava randomly at up to 6 enemies within attack range",
@@ -1199,7 +1199,7 @@
     "sp_initial": 55
   },
   {
-    "character_id": 3,
+    "operator_id": 3,
     "name": "",
     "stage_id": 1,
     "description": "Attack +20%, Attack speed + 80",
@@ -1210,7 +1210,7 @@
     "sp_initial": 20
   },
   {
-    "character_id": 3,
+    "operator_id": 3,
     "name": "",
     "stage_id": 2,
     "description": "The next attack deals 250% magical damage. Additionally, inflict -300 Defense and burn the target for 3s. Can hold 3 charges",
@@ -1221,7 +1221,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 3,
+    "operator_id": 3,
     "name": "",
     "stage_id": 3,
     "description": "Deal 140% magical damage to enemies within attack range every second and inflict -20 Magical resistance. However, ifrit loses 2% Max HP every second",
@@ -1232,7 +1232,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 65,
+    "operator_id": 65,
     "name": "",
     "stage_id": 1,
     "description": "Attack +50%",
@@ -1243,7 +1243,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 52,
+    "operator_id": 52,
     "name": "",
     "stage_id": 1,
     "description": "Immediately recover 50% of Max HP",
@@ -1254,7 +1254,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 52,
+    "operator_id": 52,
     "name": "",
     "stage_id": 2,
     "description": "Reduce Defense to 0, Attack +150%",
@@ -1265,7 +1265,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 58,
+    "operator_id": 58,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals 150% physical damage and inflicts -50% movement speed to the target for 3s",
@@ -1276,7 +1276,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 58,
+    "operator_id": 58,
     "name": "",
     "stage_id": 2,
     "description": "Attack speed +50. Every attack inflicts -50% movement speed and has 40% chance to freeze the target (unable to move) for 2s",
@@ -1287,7 +1287,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 45,
+    "operator_id": 45,
     "name": "",
     "stage_id": 1,
     "description": "Attack +80%",
@@ -1298,7 +1298,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 45,
+    "operator_id": 45,
     "name": "",
     "stage_id": 2,
     "description": "Attack +150%, however become unable to be healed by other operators",
@@ -1309,7 +1309,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 50,
+    "operator_id": 50,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals +75% damage and inflicts -40% Attack to the target for 5s",
@@ -1320,7 +1320,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 50,
+    "operator_id": 50,
     "name": "",
     "stage_id": 2,
     "description": "Attack and Defense +75%",
@@ -1331,7 +1331,7 @@
     "sp_initial": 45
   },
   {
-    "character_id": 47,
+    "operator_id": 47,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals 230% damage",
@@ -1342,7 +1342,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 47,
+    "operator_id": 47,
     "name": "",
     "stage_id": 2,
     "description": "Attack +80%, increase the effects of self talent by 3x",
@@ -1353,7 +1353,7 @@
     "sp_initial": 40
   },
   {
-    "character_id": 34,
+    "operator_id": 34,
     "name": "",
     "stage_id": 1,
     "description": "Attack +70%, 40% chance to block physical damage. Infinite Duration",
@@ -1364,7 +1364,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 34,
+    "operator_id": 34,
     "name": "",
     "stage_id": 2,
     "description": "Attack + 120%, change damage type to magic damage, attack an additional target, ranged attacks no longer reduce Attack",
@@ -1375,7 +1375,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 15,
+    "operator_id": 15,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals +140% damage and ignores 60% of enemy defense",
@@ -1386,7 +1386,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 15,
+    "operator_id": 15,
     "name": "",
     "stage_id": 2,
     "description": "Attack +120%, change damage type to magic damage, every attack recovers HP equal to 25% of the damage dealt",
@@ -1397,7 +1397,7 @@
     "sp_initial": 25
   },
   {
-    "character_id": 14,
+    "operator_id": 14,
     "name": "",
     "stage_id": 1,
     "description": "Attack +100%",
@@ -1408,7 +1408,7 @@
     "sp_initial": 15
   },
   {
-    "character_id": 14,
+    "operator_id": 14,
     "name": "",
     "stage_id": 2,
     "description": "Prevents the operator's HP from falling below 1 while the skill is active, Attack +160%. Operator is stunned for 10s after the skill ends",
@@ -1419,7 +1419,7 @@
     "sp_initial": 35
   },
   {
-    "character_id": 23,
+    "operator_id": 23,
     "name": "",
     "stage_id": 1,
     "description": "Attack +45%, Attack speed +45",
@@ -1430,7 +1430,7 @@
     "sp_initial": 15
   },
   {
-    "character_id": 23,
+    "operator_id": 23,
     "name": "",
     "stage_id": 2,
     "description": "Reduce Defense to 0, Attack +100%. Increase activation chance of defense-ignore talent by 2.5x",
@@ -1441,7 +1441,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 41,
+    "operator_id": 41,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals 230% damage",
@@ -1452,7 +1452,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 41,
+    "operator_id": 41,
     "name": "",
     "stage_id": 2,
     "description": "Deal 400% physical damage to up to 5 enemies within 3 tiles in front of the operator",
@@ -1463,7 +1463,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 9,
+    "operator_id": 9,
     "name": "",
     "stage_id": 1,
     "description": "The next attack deals 290% damage",
@@ -1474,7 +1474,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 9,
+    "operator_id": 9,
     "name": "",
     "stage_id": 2,
     "description": "Can switch between the default state and the following state: reduce attack range, Defense +100%, recover 6% Max HP every second",
@@ -1485,7 +1485,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 9,
+    "operator_id": 9,
     "name": "",
     "stage_id": 3,
     "description": "Defense -70%, Attack +200%, increase attack range and attack up to 6 targets simultaneously (treated as melee attacks)",
@@ -1496,7 +1496,7 @@
     "sp_initial": 75
   },
   {
-    "character_id": 64,
+    "operator_id": 64,
     "name": "",
     "stage_id": 1,
     "description": "The next attack will push the target away with large force, dealing 150% physical damage",
@@ -1507,7 +1507,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 64,
+    "operator_id": 64,
     "name": "",
     "stage_id": 2,
     "description": "Immediately push away all enemies 2 tiles ahead with large force, dealing 300% physical damage",
@@ -1518,7 +1518,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 59,
+    "operator_id": 59,
     "name": "",
     "stage_id": 1,
     "description": "The next attack will pull the enemy towards self with large force, dealing 190% physical damage",
@@ -1529,7 +1529,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 59,
+    "operator_id": 59,
     "name": "",
     "stage_id": 2,
     "description": "Pull 2 faraway enemies towards self with large force, dealing 225% physical damage",
@@ -1540,7 +1540,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 56,
+    "operator_id": 56,
     "name": "",
     "stage_id": 1,
     "description": "Defense +400% after deploying, effect weakens over 12s",
@@ -1551,7 +1551,7 @@
     "sp_initial": null
   },
   {
-    "character_id": 56,
+    "operator_id": 56,
     "name": "",
     "stage_id": 2,
     "description": "Obtain a shield that absorbs damage equal to 250% of Max HP after deploying, effect weakens over 10s",
@@ -1562,7 +1562,7 @@
     "sp_initial": null
   },
   {
-    "character_id": 17,
+    "operator_id": 17,
     "name": "",
     "stage_id": 1,
     "description": "The next attack will push the target away with large force, inflicting -30% movement speed for 5s",
@@ -1573,7 +1573,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 17,
+    "operator_id": 17,
     "name": "",
     "stage_id": 2,
     "description": "Immediately rush forward and target the closest enemy in a straight line ahead, pushing back all enemies around with huge force and deal 250% physical damage. Additionally, inflict -30% movement speed to all targets for 5s",
@@ -1584,7 +1584,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 25,
+    "operator_id": 25,
     "name": "",
     "stage_id": 1,
     "description": "The next attack will pull the enemy towards self with large force, dealing 180% magical damage",
@@ -1595,7 +1595,7 @@
     "sp_initial": 0
   },
   {
-    "character_id": 25,
+    "operator_id": 25,
     "name": "",
     "stage_id": 2,
     "description": "Immediately pull up to 3 enemeis from a large area ahead towards self with large force, dealing 200% damage that ignores Defense and stuns them for 3s",
@@ -1606,7 +1606,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 19,
+    "operator_id": 19,
     "name": "",
     "stage_id": 1,
     "description": "Every attack inflicts -50% movement speed to the target for 5s",
@@ -1617,7 +1617,7 @@
     "sp_initial": null
   },
   {
-    "character_id": 19,
+    "operator_id": 19,
     "name": "",
     "stage_id": 2,
     "description": "Slows pre-attack animation, increase attack interval(+1.7s), Attack +90%. Attacked targets are stunned for 1s",
@@ -1628,7 +1628,7 @@
     "sp_initial": 10
   },
   {
-    "character_id": 38,
+    "operator_id": 38,
     "name": "",
     "stage_id": 1,
     "description": "Attack +80% after deploying, additionally gain 50% physical evasion",
@@ -1639,7 +1639,7 @@
     "sp_initial": null
   },
   {
-    "character_id": 38,
+    "operator_id": 38,
     "name": "",
     "stage_id": 2,
     "description": "Immediately deal 250% physical damage to all nearby enemies after deploying and stun them for 3s",
