@@ -11,6 +11,7 @@ module.exports = gql`
     isRanged: Boolean
     stages: [OperatorStage]
     combatSkills: [CombatSkill]
+    finalStage: OperatorStage
   }
   input OperatorCreateInput {
     iid: Int!

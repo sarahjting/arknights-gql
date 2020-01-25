@@ -25,6 +25,16 @@ describe("Operator Stages", () => {
       expect(data.stages[0]).to.have.property("block");
       expect(data.stages[0]).to.have.property("atkSpeed");
     });
+    it("should return it's maximum stage's stats", async () => {
+      const res = await axios.post(`${url}/graphql`, {
+        query: `query{getOperator(name: "Exusiai"){ finalStage { stage {name} hp atk def res redeploy cost block atkSpeed } }}`
+      });
+      const data = res.data.data.getOperator;
+      expect(data).to.be.an("object");
+      expect(data).to.have.property("finalStage");
+      expect(data.finalStage).to.be.an("object");
+      expect(data.finalStage.stage.name).to.equal("ELITE2");
+    });
   });
   describe("Stage Queries", () => {
     it("should return all of a stage's operators", async () => {

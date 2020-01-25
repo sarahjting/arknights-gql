@@ -47,6 +47,12 @@ module.exports = models => {
         return models.operatorStages.getAll({
           operator_id: operator.id
         });
+      },
+      finalStage: operator => {
+        return models.operatorStages.get(
+          { operator_id: operator.id },
+          { orderBy: [{ column: "stage_id", direction: "DESC" }] }
+        );
       }
     }
   };
