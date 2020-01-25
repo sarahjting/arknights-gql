@@ -90,10 +90,10 @@
     "origin": "Leithanian",
     "race": "Caprinae",
     "class": "Caster",
-    "faction": "[[]]",
+    "faction": "Leithanian",
     "origin_id": 5,
     "race_id": 6,
-    "faction_id": null,
+    "faction_id": 13,
     "class_id": 6,
     "is_ranged": true
   },
@@ -182,7 +182,7 @@
     "is_ranged": true
   },
   {
-    "name": "Spectre",
+    "name": "Specter",
     "rarity": 5,
     "iid": "143",
     "origin": "Undisclosed",
@@ -191,7 +191,7 @@
     "faction": "Rhodes Island",
     "origin_id": null,
     "race_id": null,
-    "faction_id": 4,
+    "faction_id": 12,
     "class_id": 2,
     "is_ranged": false
   },
@@ -518,7 +518,7 @@
     "is_ranged": true
   },
   {
-    "name": "Project Red",
+    "name": "Projekt Red",
     "rarity": 5,
     "iid": "144",
     "origin": "Syracuse",
@@ -588,7 +588,7 @@
     "is_ranged": false
   },
   {
-    "name": "Gaviel",
+    "name": "Gavial",
     "rarity": 4,
     "iid": "187",
     "origin": "Undisclosed",
@@ -734,7 +734,7 @@
     "origin": "Leithanian",
     "race": "Caprinae",
     "class": "Supporter",
-    "faction": "Undisclosed",
+    "faction": "Leithanian",
     "origin_id": 5,
     "race_id": 6,
     "faction_id": null,
