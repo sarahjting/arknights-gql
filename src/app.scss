@@ -1,3 +1,311 @@
-.red {
-  color: red;
+$background-color: #111;
+$panel-color: #333;
+$sub-panel-color: darken($panel-color, 5%);
+$sub-sub-panel-color: darken($sub-panel-color, 5%);
+$border-color: #555;
+$font-color: #ccc;
+
+$row-width: 800px;
+$highlight-height: 500px;
+$row-height: 100px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $background-color;
+  color: $font-color;
+  font-family: Open Sans;
+  font-size: 10pt;
+}
+h1 {
+  margin: 0;
+  font-family: Raleway;
+  font-size: 16pt;
+}
+.hide {
+  display: none;
+}
+.class-icon {
+  cursor: pointer;
+}
+.form,
+.operators-operator,
+.highlight,
+.highlight-close {
+  display: flex;
+  margin: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: $panel-color;
+  overflow: hidden;
+}
+.form-element {
+  flex: 1;
+  .form-header {
+    background-color: $sub-panel-color;
+  }
+  .form-header,
+  .form-input {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+}
+.form-wrapper,
+.operators,
+.highlight-wrapper {
+  max-width: $row-width;
+  width: 100%;
+  margin: auto;
+}
+.operators {
+  .operators-operator {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    .thumb {
+      height: $row-height;
+      background-color: $sub-panel-color;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      img {
+        max-width: 80px;
+      }
+    }
+    .body {
+      flex: 1;
+      position: relative;
+      height: $row-height;
+      display: flex;
+      height: $row-height;
+
+      .faction {
+        position: absolute;
+        max-height: 100%;
+        z-index: 0;
+        opacity: 0.1;
+        bottom: 0;
+        right: 0;
+        img {
+          max-height: $row-height;
+        }
+      }
+
+      .header {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin-bottom: 5px;
+        flex: 3;
+        align-items: center;
+        .title {
+          cursor: pointer;
+          flex: 1;
+          margin-left: 10px;
+        }
+        .class-icon {
+          margin-left: 5px;
+        }
+        .stage-icon {
+          margin-left: 10px;
+        }
+        .stage-icon,
+        .class-icon {
+          height: 75px;
+          width: 75px;
+          background-color: $sub-panel-color;
+          border: 1px solid $border-color;
+          border-radius: 5px;
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+      .stats {
+        align-items: center;
+        display: flex;
+        flex: 2;
+        table {
+          height: $row-height;
+          flex: 1;
+          td {
+            padding: 0 5px;
+          }
+          .stats-header {
+            background-color: $sub-panel-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.highlight-close {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: $border-color;
+  display: block;
+}
+.highlight {
+  align-items: stretch;
+  display: flex;
+  height: 500px;
+  .stage-icon,
+  .class-icon {
+    height: 50px;
+    width: 50px;
+    background-color: $sub-panel-color;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    cursor: pointer;
+    img {
+      max-width: 100%;
+    }
+    &.active {
+      background-color: #ccc;
+    }
+  }
+
+  .left {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: $highlight-height;
+    height: 100%;
+
+    background-color: $sub-panel-color;
+
+    .image {
+      margin-left: -30%;
+      width: 150%;
+      z-index: 1;
+      position: absolute;
+      img {
+        max-width: 100%;
+      }
+    }
+    .faction {
+      position: absolute;
+      max-height: 100%;
+      z-index: 0;
+      opacity: 0.1;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 50%;
+      transform: rotate(20deg);
+    }
+    .class-icon {
+      position: absolute;
+      z-index: 2;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .body {
+    align-items: center;
+    flex: 1;
+    position: relative;
+    overflow: scroll;
+    height: 100%;
+    padding: 10px;
+
+    .header {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+
+      .title {
+        flex: 1;
+        margin-left: 10px;
+      }
+      .stage-icon {
+        margin-left: 10px;
+      }
+    }
+
+    .stats {
+      display: flex;
+      overflow: hidden;
+      border-radius: 5px;
+
+      table {
+        height: $row-height;
+        flex: 1;
+        background-color: $sub-panel-color;
+        td {
+          padding: 5px 10px;
+        }
+        .stats-header {
+          background-color: $sub-sub-panel-color;
+        }
+      }
+    }
+
+    .skills {
+      .stage-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .skills-title {
+        padding: 10px;
+      }
+      .skills-skill {
+        border-radius: 5px;
+        background-color: $sub-sub-panel-color;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        display: flex;
+        flex: 1;
+        position: relative;
+        align-items: center;
+
+        .skill-body {
+          position: relative;
+          flex: 3;
+          width: 100%;
+          margin-bottom: 5px;
+          align-items: center;
+          .skill-header {
+            display: flex;
+            align-items: stretch;
+            .skill-title {
+              align-items: center;
+              margin-left: 5px;
+              display: flex;
+              flex: 1;
+            }
+          }
+        }
+        .skill-stats {
+          align-items: center;
+          display: flex;
+          flex: 2;
+          table {
+            height: $row-height;
+            flex: 1;
+            font-size: 0.8rem;
+            align-items: center;
+            td {
+              flex: 1;
+              padding: 5px 10px;
+              background-color: $sub-panel-color;
+            }
+            .stats-header {
+              background-color: $sub-sub-panel-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }
