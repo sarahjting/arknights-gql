@@ -1,5 +1,6 @@
 require("dotenv").config();
 const axios = require("axios");
+const factions = require("../data/json/factions.json");
 const { expect } = require("chai");
 const url = `http://localhost:${process.env.PORT}`;
 
@@ -10,7 +11,7 @@ describe("Factions", () => {
         query: "query{getFactions{name}}"
       });
       expect(res.data.data.getFactions).to.be.an("array");
-      expect(res.data.data.getFactions.length).to.equal(11);
+      expect(res.data.data.getFactions.length).to.equal(factions.length);
       expect(res.data.data.getFactions[0]).to.have.property("name");
     });
     it("should return a single faction", async () => {
@@ -54,7 +55,7 @@ describe("Factions", () => {
         query: `query{getFactions{name}}`
       });
       expect(getRes.data.data.getFactions).to.be.an("array");
-      expect(getRes.data.data.getFactions.length).to.equal(12);
+      expect(getRes.data.data.getFactions.length).to.equal(factions.length + 1);
       expect(
         getRes.data.data.getFactions[getRes.data.data.getFactions.length - 1]
       ).to.deep.equal(expected);
@@ -98,7 +99,7 @@ describe("Factions", () => {
         query: `query{getFactions{name}}`
       });
       expect(getRes.data.data.getFactions).to.be.an("array");
-      expect(getRes.data.data.getFactions.length).to.equal(11);
+      expect(getRes.data.data.getFactions.length).to.equal(factions.length);
       const checkRes = await axios.post(`${url}/graphql`, {
         query: `query{getFaction(name:"Test Faction Updated"){name}}`
       });
