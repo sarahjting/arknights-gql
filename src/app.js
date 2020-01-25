@@ -6,6 +6,12 @@ $(document).ready(function() {
     const className = $(this).attr("data-class");
     if (className) loadOperators({ class: className });
   });
+
+  $(".highlight-close").click(() => {
+    $(".highlight-wrapper").addClass("hide");
+    $(".operators").removeClass("hide");
+    $(".form-wrapper").removeClass("hide");
+  });
 });
 
 function query(query, variables = []) {
@@ -140,13 +146,9 @@ function loadOperator(name) {
         });
       }
     });
+    $(".form-wrapper").addClass("hide");
     $(".operators").addClass("hide");
     $(".highlight-wrapper").removeClass("hide");
-
-    $(".highlight-close").click(() => {
-      $(".highlight-wrapper").addClass("hide");
-      $(".operators").removeClass("hide");
-    });
   });
 }
 function getFormWhere() {
@@ -213,7 +215,7 @@ function loadOperators(where) {
         $(newRow).removeClass("hide");
         $(".operators").append(newRow);
         $(".thumb", newRow).click(() => loadOperator(v.name));
-        $(".title", newRow).click(() => loadOperator(v.name));
+        $(newRow).click(() => loadOperator(v.name));
       });
     }
   });
