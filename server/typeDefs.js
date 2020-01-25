@@ -10,10 +10,7 @@ const rootTypeDef = gql`
     spCost: Int
     spInitial: Int
   }
-  input CombatSkillInput {
-    operator: String!
-    stage: String
-    stageId: Int
+  input CombatSkillCreateInput {
     description: String!
     isAutoCharge: Boolean
     isAuto: Boolean
@@ -21,30 +18,13 @@ const rootTypeDef = gql`
     spCost: Int
     spInitial: Int
   }
-  type OperatorStage {
-    operator: Operator
-    stage: String
-    hp: Int
-    atk: Int
-    def: Int
-    cost: Int
-    block: Int
-    res: Int
-    redeploy: Int
-    atkSpeed: Int
-  }
-  input OperatorStageInput {
-    operator: String!
-    stage: String
-    stageId: Int
-    hp: Int!
-    atk: Int!
-    def: Int!
-    cost: Int!
-    block: Int!
-    res: Int!
-    redeploy: Int!
-    atkSpeed: Int!
+  input CombatSkillUpdateInput {
+    description: String
+    isAutoCharge: Boolean
+    isAuto: Boolean
+    duration: Int
+    spCost: Int
+    spInitial: Int
   }
   type Query {
     root: String
@@ -55,9 +35,15 @@ const rootTypeDef = gql`
 `;
 
 const typeDefs = [rootTypeDef];
-["classes", "factions", "origins", "races", "stages", "operators"].forEach(v =>
-  typeDefs.push(require(`./${v}/typeDefs.js`))
-);
+[
+  "classes",
+  "factions",
+  "origins",
+  "races",
+  "stages",
+  "operators",
+  "operatorStages"
+].forEach(v => typeDefs.push(require(`./${v}/typeDefs.js`)));
 module.exports = typeDefs;
 
 /*

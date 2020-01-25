@@ -7,7 +7,8 @@ module.exports = function(knex) {
     "origins",
     "races",
     "stages",
-    "combatSkills"
+    "combatSkills",
+    "operatorStages"
   ].forEach(v => (result[v] = require(`./${v}/model.js`)(knex)));
   return result;
 };

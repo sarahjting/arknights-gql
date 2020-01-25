@@ -21,7 +21,7 @@ module.exports = models => {
     },
     Stage: {
       operators: stage => {
-        return models.operators.getAllByStageId(stage.id);
+        return models.operatorStages.getAll({ stage_id: stage.id });
       },
       combatSkills: stage => {
         return models.combatSkills.getAll({ stage_id: stage.id });

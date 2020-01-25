@@ -3,6 +3,12 @@ module.exports = knex => {
     getAll: async function() {
       return await this._knex().select("name");
     },
+    getAllByOperator: async function(operatorId) {
+      return await this._knex()
+        .select("name")
+        .join("operator_stages", "stages.id", "=", "operator_stages.stage_id")
+        .where("operator_stages.operator_id", operatorId);
+    },
     get: async function(where) {
       const query =
         where.name !== undefined

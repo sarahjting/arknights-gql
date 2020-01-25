@@ -42,6 +42,11 @@ module.exports = models => {
         return operator.origin_id
           ? models.races.get({ id: operator.race_id })
           : null;
+      },
+      stages: operator => {
+        return models.operatorStages.getAll({
+          operator_id: operator.id
+        });
       }
     }
   };

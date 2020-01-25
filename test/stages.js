@@ -29,7 +29,7 @@ describe("Stages", () => {
     });
     it("should return operators for a stage", async () => {
       const res = await axios.post(`${url}/graphql`, {
-        query: `query{getStage(name:"ELITE1"){operators{name}}}`
+        query: `query{getStage(name:"ELITE1"){operators{operator{name}}}}`
       });
       expect(res.data.data.getStage).to.be.an("object");
       expect(res.data.data.getStage.operators).to.be.an("array");

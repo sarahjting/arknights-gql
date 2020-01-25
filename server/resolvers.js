@@ -7,7 +7,8 @@ module.exports = knex => {
     "origins",
     "races",
     "stages",
-    "operators"
+    "operators",
+    "operatorStages"
   ]) {
     const resolvers = require(`./${key}/resolvers.js`)(knex);
     Object.keys(resolvers).forEach(key => {

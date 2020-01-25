@@ -3,7 +3,7 @@ module.exports = gql`
   type Stage {
     id: Int
     name: String
-    operators: [Operator]
+    operators: [OperatorStage]
     combatSkills: [CombatSkill]
   }
   input StageCreateInput {
