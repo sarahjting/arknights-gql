@@ -8,25 +8,39 @@
   "license": "MIT",
   "scripts": {
     "test": "yarn seed && mocha test",
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js",
     "migrate": "knex migrate:latest --knexfile knexfile.js",
     "rollback": "knex migrate:rollback --knexfile knexfile.js ",
     "seed": "knex seed:run --knexfile knexfile.js ",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "dev": "webpack --watch --progress --colors",
+    "build": "webpack",
+    "start": "yarn build && node index.js",
+    "serve": "yarn build && nodemon index.js"
   },
   "dependencies": {
     "apollo-server": "^2.9.16",
+    "apollo-server-express": "^2.9.16",
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "chai": "^4.2.0",
+    "css-loader": "^3.4.2",
     "dotenv": "^8.2.0",
     "graphql": "^14.5.8",
+    "graphql-tools": "^4.0.6",
     "knex": "^0.20.8",
     "lodash": "^4.17.15",
+    "mini-css-extract-plugin": "^0.9.0",
     "mocha": "^7.0.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
     "pg": "^7.17.1",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
   }
 }
