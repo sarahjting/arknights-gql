@@ -103,7 +103,7 @@ const variables = {
         where: { class: "Sniper" },
         orderBy: "atk"
     };
-axios.post("http://localhost:4000/graphql", {
+axios.post("/graphql", {
     query: query,
     variables: variables
   }).then(data => data.data.data).then(data => {
