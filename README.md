@@ -2,7 +2,7 @@
 
 This was created during my time as a student at Code Chrysalis!
 
-This library sets up an Apollo GraphQL server that serves Arknights operator data. Aside from the default GraphQL playground it also serves a basic client that you can use to view and search the data.
+This library sets up an Apollo GraphQL server that serves Arknights operator data. Aside from the default GraphQL playground it also serves a basic sample website that you can use to view and search the data.
 
 View a live demo over at https://glacial-depths-53537.herokuapp.com/.
 
@@ -46,7 +46,7 @@ yarn start
 
 # Usage
 
-The GraphQL playground and endpoint will be up at `http://localhost:4000/graphql` and the client up at `http://localhost:4000` by default.
+The GraphQL playground and endpoint will be up at `http://localhost:4000/graphql` and the sample website at `http://localhost:4000` by default.
 
 **Select All Operators**
 
@@ -59,12 +59,6 @@ query{
         faction { name }
         class { name }
         race { name }
-        stages {
-            stage { name }
-            hp
-            atk
-            def
-        }
     }
 }
 ```
@@ -80,19 +74,6 @@ query($where: OperatorWhereInput, $orderBy: OperatorOrderBy) {
         faction { name }
         class { name }
         race { name }
-        stages {
-            stage { name }
-            hp
-            atk
-            def
-        }
-        combatSkills {
-            stage { name }
-            description
-            isAutoCharge
-            isAuto
-            duration
-        }
     }
 }
 ```
@@ -110,10 +91,12 @@ query($where: OperatorWhereInput, $orderBy: OperatorOrderBy) {
 const axios = require("axios");
 const query = `query($where: OperatorWhereInput, $orderBy: OperatorOrderBy) {
         getOperators(where: $where, orderBy: $orderBy) {
-                name rarity isRanged
-                class{name} faction{name} race{name}
-                stages{stage{name} hp atk def}
-                combatSkills{stage{name} description}
+                name
+                rarity
+                isRanged
+                class{name}
+                faction{name}
+                race{name}
             }
     }`;
 const variables = {
@@ -126,14 +109,12 @@ axios.post("http://localhost:4000/graphql", {
   }).then(data => data.data.data).then(data => {
     // data is now an array of snipers ordered by atk
     console.log(data);
-  })
-  .catch(err => {
+  }).catch(err => {
     console.log(err);
   });
-
 ```
 
-For more detailed information regarding what queries and mutations are available, please check out the playground docs.
+For more detailed information regarding what queries and mutations are available, please check out the docs in the playground at `/graphql`.
 
 # Testing
 
@@ -144,5 +125,7 @@ For more detailed information regarding what queries and mutations are available
 - Fill out data:
   - Other operator info: potential upgrades, stage upgrade costs, range, talents, role tags.
   - Need to scrape for combat skill names, infrastructure skills too.
-  - Other useful data: enemies, missions, pinboard quests, base rooms, furnitures, workshop recipes, factory recipes, trading post orders.
+  - Other useful data: items (and item sources), enemies, missions, pinboard quests, base rooms, furnitures, workshop recipes, factory recipes, trading post orders.
+- More tests:
+  - Current tests only cover best cases. Need to add testing for fail cases and edge cases (eg. creating or updating with partial inputs, creating or updating with invalid inputs).
 - Add feature that keeps track of which operators you currently have and their current stage & level.
