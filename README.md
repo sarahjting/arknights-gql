@@ -48,6 +48,93 @@ yarn start
 
 The GraphQL playground and endpoint will be up at `http://localhost:4000/graphql` and the client up at `http://localhost:4000` by default.
 
+**Select All Operators**
+
+```
+query{
+    getOperators {
+        iid
+        name
+        rarity
+        faction { name }
+        class { name }
+        race { name }
+        stages {
+            stage { name }
+            hp
+            atk
+            def
+        }
+    }
+}
+```
+
+**Search Operators** (eg: all Snipers, order by ATK)
+
+```
+query($where: OperatorWhereInput, $orderBy: OperatorOrderBy) {
+    getOperators(where: $where, orderBy: $orderBy) {
+        iid
+        name
+        rarity
+        faction { name }
+        class { name }
+        race { name }
+        stages {
+            stage { name }
+            hp
+            atk
+            def
+        }
+        combatSkills {
+            stage { name }
+            description
+            isAutoCharge
+            isAuto
+            duration
+        }
+    }
+}
+```
+
+```
+{
+    "where": { class: "Sniper" },
+    "orderBy": "atk"
+}
+```
+
+**Search Operators** (in JavaScript, using axios)
+
+```
+const axios = require("axios");
+const query = `query($where: OperatorWhereInput, $orderBy: OperatorOrderBy) {
+        getOperators(where: $where, orderBy: $orderBy) {
+                name rarity isRanged
+                class{name} faction{name} race{name}
+                stages{stage{name} hp atk def}
+                combatSkills{stage{name} description}
+            }
+    }`;
+const variables = {
+        where: { class: "Sniper" },
+        orderBy: "atk"
+    };
+axios.post("http://localhost:4000/graphql", {
+    query: query,
+    variables: variables
+  }).then(data => data.data.data).then(data => {
+    // data is now an array of snipers ordered by atk
+    console.log(data);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+```
+
+For more detailed information regarding what queries and mutations are available, please check out the playground docs.
+
 # Testing
 
 `yarn test` to run tests. Please note that this re-seeds the database and will destroy all new data.
