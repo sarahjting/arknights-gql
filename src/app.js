@@ -69,6 +69,7 @@ function getStageImage(stageName) {
   return `/img/stages/${stageName}.png`;
 }
 function loadOperatorStage(operator, stage) {
+  $(".image img", ".highlight").attr("src", "");
   $(".image img", ".highlight").attr(
     "src",
     getOperatorImage(operator.name, stage)
