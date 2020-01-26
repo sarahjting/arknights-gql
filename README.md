@@ -4,6 +4,8 @@ This was created during my time as a student at Code Chrysalis!
 
 This library sets up an Apollo GraphQL server that serves Arknights operator data. Aside from the default GraphQL playground it also serves a basic client that you can use to view and search the data.
 
+View a live demo over at https://glacial-depths-53537.herokuapp.com/.
+
 # Installation
 
 1. Clone the repo:
