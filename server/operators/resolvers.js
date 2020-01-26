@@ -43,7 +43,7 @@ module.exports = models => {
           : null;
       },
       race: operator => {
-        return operator.origin_id
+        return operator.race_id
           ? models.races.get({ id: operator.race_id })
           : null;
       },
