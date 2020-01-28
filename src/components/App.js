@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Blurb from "./blurb.js";
+import Blurb from "./Blurb.js";
 import Form from "./Form.js";
 import HighlightOperator from "./HighlightOperator.js";
 import OperatorList from "./OperatorList.js";
