@@ -30,7 +30,9 @@ export default function HighlightOperatorSkillRow(props) {
             </tr>
             <tr>
               <td className="stats-header">DRTN</td>
-              <td className="duration">{skill.duration}s</td>
+              <td className="duration">
+                {skill.duration ? `${skill.duration}s` : "N/A"}
+              </td>
             </tr>
           </tbody>
         </table>
@@ -39,11 +41,13 @@ export default function HighlightOperatorSkillRow(props) {
           <tbody>
             <tr>
               <td className="stats-header">COST</td>
-              <td className="spCost">{skill.spCost}</td>
+              <td className="spCost">{skill.spCost || "N/A"}</td>
             </tr>
             <tr>
               <td className="stats-header">INIT</td>
-              <td className="spInitial">{skill.spInitial}</td>
+              <td className="spInitial">
+                {skill.spCost ? skill.spInitial : "N/A"}
+              </td>
             </tr>
             <tr>
               <td className="stats-header"></td>

@@ -113,7 +113,9 @@ export default function HighlightOperator(props) {
                 </tr>
                 <tr>
                   <td className="stats-header">RNG</td>
-                  <td className="isRanged">{operator.isRanged}</td>
+                  <td className="isRanged">
+                    {operator.isRanged ? "YES" : "NO"}
+                  </td>
                 </tr>
                 <tr>
                   <td className="stats-header">&nbsp;</td>
