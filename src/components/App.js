@@ -9,6 +9,7 @@ export default function App() {
   const [operator, setOperator] = useState(null);
   const [operatorList, setOperatorList] = useState(null);
   const [formData, setFormData] = useState(null);
+
   const loadOperator = name => {
     utils
       .query(
@@ -22,6 +23,7 @@ export default function App() {
         setOperator(data.getOperator);
       });
   };
+
   const loadOperators = (where, orderBy) => {
     let q = `query($where: OperatorWhereInput, $orderBy: OperatorOrderBy){
       getOperators(where: $where, orderBy: $orderBy){
@@ -34,6 +36,7 @@ export default function App() {
       setOperatorList(data.getOperators);
     });
   };
+
   useEffect(() => {
     utils
       .query(
@@ -41,29 +44,32 @@ export default function App() {
       )
       .then(data => setFormData(data));
   }, []);
+
+  let formComponent = "",
+    operatorListComponent = "",
+    highlightOperatorComponent = "";
+  if (operator) {
+    highlightOperatorComponent = (
+      <HighlightOperator operator={operator} setOperator={setOperator} />
+    );
+  }
+  if (!operator && formData) {
+    formComponent = (
+      <Form operator={operator} data={formData} loadOperators={loadOperators} />
+    );
+  }
+  if (!operator && operatorList) {
+    operatorListComponent = (
+      <OperatorList setOperator={loadOperator} operators={operatorList} />
+    );
+  }
+
   return (
     <div>
       <Blurb />
-      {operator ? (
-        <HighlightOperator operator={operator} setOperator={setOperator} />
-      ) : (
-        ""
-      )}
-      {formData && !operator ? (
-        <Form
-          races={formData.races}
-          factions={formData.factions}
-          classes={formData.classes}
-          loadOperators={loadOperators}
-        />
-      ) : (
-        ""
-      )}
-      {operatorList && !operator ? (
-        <OperatorList setOperator={loadOperator} operators={operatorList} />
-      ) : (
-        ""
-      )}
+      {highlightOperatorComponent}
+      {formComponent}
+      {operatorListComponent}
     </div>
   );
 }

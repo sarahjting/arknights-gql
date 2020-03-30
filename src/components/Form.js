@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 export default function Form(props) {
-  const { classes, races, factions, loadOperators } = props;
+  const { data, loadOperators } = props;
+
+  const { races, factions, classes } = data;
   const [selectedClass, setSelectedClass] = useState("");
   const [selectedRace, setSelectedRace] = useState("");
   const [selectedFaction, setSelectedFaction] = useState("");

@@ -12,7 +12,7 @@
     "rollback": "knex migrate:rollback --knexfile knexfile.js ",
     "seed": "knex seed:run --knexfile knexfile.js ",
     "precommit": "pretty-quick --staged",
-    "dev": "webpack --watch --progress --colors --optimize-minimize=false",
+    "dev": "webpack --watch --progress --colors",
     "build": "webpack",
     "start": "yarn build && node index.js",
     "serve": "yarn build && nodemon index.js"
